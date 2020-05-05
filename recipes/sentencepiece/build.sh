@@ -11,6 +11,7 @@ export PKG_CONFIG_PATH=${SENTENCEPIECE_HOME}/lib/pkgconfig
 # cd ..
 cd python
 
+
 python setup.py build
 python setup.py install
 
