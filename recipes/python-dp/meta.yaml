@@ -17,14 +17,19 @@ build:
 requirements:
   build:
     - bazel
+    - pybind11
     - pipenv
+    - git
   host:
+    - git
     - python
     - pipenv
     - pip
+    - pybind11
     - pytest
   run:
     - python
+    - pybind11
     - pytest
 
 test:
