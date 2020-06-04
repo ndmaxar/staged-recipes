@@ -17,8 +17,10 @@ build:
 requirements:
   build:
     - bazel
+    - pipenv
   host:
     - python
+    - pipenv
     - pip
     - pytest
   run:
