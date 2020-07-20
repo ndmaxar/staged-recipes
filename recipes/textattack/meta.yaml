@@ -19,7 +19,7 @@ requirements:
     - pip
   run:
     - python
-    - bert-score # recipe auto
+    - bert_score # recipe auto
     - editdistance
     # - flair>=0.5.1 # try w/o
     - filelock
