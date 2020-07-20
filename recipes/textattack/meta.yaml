@@ -37,7 +37,7 @@ requirements:
     - tensorflow_hub
     - tensorboardX
     - terminaltables
-    - tokenizers==0.8.1-rc1 # recipe auto failed: needs access to setuptools-rust to install
+    - tokenizers
     - tqdm
     - visdom
     - wandb # recipe auto
