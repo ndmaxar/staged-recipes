@@ -1,5 +1,5 @@
-{% set name = "language-tool-python" %}
-{% set name2 = "language_tool_python" %}
+# {% set name = "language-tool-python" %}
+{% set name = "language_tool_python" %}
 {% set version = "2.3.1" %}
 
 package:
@@ -7,7 +7,7 @@ package:
   version: "{{ version }}"
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name2 }}/{{ name2 }}-{{ version }}.tar.gz"
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
   sha256: d6888189b784f91fc885ba6ac0c3e0f397e9f5ac0afe1daece72aca7afdeb696
 
 build:
