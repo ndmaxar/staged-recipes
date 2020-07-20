@@ -1,5 +1,5 @@
 {% set name = "language-tool-python" %}
-{% set name2 = "language_tool-_python" %}
+{% set name2 = "language_tool_python" %}
 {% set version = "2.3.1" %}
 
 package:
@@ -28,13 +28,13 @@ test:
     - language_tool_python
 
 about:
-  home: https://pypi.org/project/language-tool-python/
+  home: https://github.com/jxmorris12/language_tool_python
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
   summary: a grammar checker for Python
   doc_url: https://pypi.org/project/language-tool-python/
-  dev_url: https://pypi.org/project/language-tool-python/
+  dev_url: https://github.com/jxmorris12/language_tool_python
 
 extra:
   recipe-maintainers:
