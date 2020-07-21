@@ -29,6 +29,7 @@ requirements:
     - pytorch >=1.0.0
     - tqdm >=4.31.1
     - transformers
+    - dataclasses
 
 test:
   imports:
@@ -39,6 +40,7 @@ test:
     - bert-score-show --help
   requires:
     - pytest
+    - dataclasses
 
 about:
   home: https://github.com/Tiiiger/bert_score
