@@ -17,6 +17,7 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
+  skip: True  # [py<37]
 
 requirements:
   host:
@@ -31,7 +32,7 @@ requirements:
     - pytorch >=1.0.1
     - tqdm
     - transformers
-    - dataclasses
+    # - dataclasses
     # models exist in versions > 0.2.3 that aren't supported by latest transformers recipe (2.1.1)
 
 test:
@@ -43,8 +44,8 @@ test:
     - sentence_transformers.models
     - sentence_transformers.models.tokenizer
     - sentence_transformers.readers
-  requires:
-    - dataclasses
+  # requires:
+  #   - dataclasses
 
 about:
   home: https://github.com/UKPLab/sentence-transformers
