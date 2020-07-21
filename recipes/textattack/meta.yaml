@@ -41,6 +41,7 @@ requirements:
     - tqdm
     - visdom
     - wandb
+    - flair
 
 test:
   commands:
