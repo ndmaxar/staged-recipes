@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/QData/{{ name|title }}/archive/{{ version }}.tar.gz
-  sha256: db771ac4978c0e70f891c47770b8e2c0c1230ed7aecb47cec6979fd538f16bc6
+  sha256: 9ccb8b2a43120ee2d140fda78d4dfd7f0339e6d051a2c67cc9e891df2b993d85
 
 build:
   number: 0

@@ -37,8 +37,8 @@ test:
   commands:
     - bert-score --help
     - bert-score-show --help
-  # requires:
-  #   - pytest
+  requires:
+    - pytest
 
 about:
   home: https://github.com/Tiiiger/bert_score
