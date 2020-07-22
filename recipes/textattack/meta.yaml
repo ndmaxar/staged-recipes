@@ -30,11 +30,11 @@ requirements:
     - numpy
     - pandas>=1.0.1
     - scikit-learn
-    - scipy==1.4.1
+    - scipy >=1.4.1
     - sentence-transformers
     - pytorch
     - transformers
-    - tensorflow>=2
+    - tensorflow >=2
     - tensorflow-hub
     - tensorboardX
     - terminaltables
