@@ -12,6 +12,7 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
+  ski: True  # [py<37]
 
 requirements:
   host:
@@ -25,7 +26,7 @@ requirements:
     # - requests >=2.19.0
     # - tqdm >=4.27
   run:
-    - dataclasses;python_version <'3.7'
+    # - dataclasses;python_version <'3.7'
     - dill
     - filelock
     - numpy
