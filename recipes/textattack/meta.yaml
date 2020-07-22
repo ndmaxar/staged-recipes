@@ -26,6 +26,7 @@ requirements:
     - language_tool_python
     - lru-dict 
     - nltk
+    - nlp
     - numpy
     - pandas>=1.0.1
     - scikit-learn
