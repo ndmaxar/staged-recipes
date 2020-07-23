@@ -52,6 +52,7 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: "A very simple framework for state-of-the-art NLP."
+  doc_url: https://pypi.org/project/flair/
   dev_url: https://github.com/flairNLP/flair
 
 extra:
