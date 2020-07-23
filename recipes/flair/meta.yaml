@@ -34,7 +34,6 @@ requirements:
     - hyperopt >=0.1.1
     - transformers
     - bpemb
-    # - regex
     - tabulate
     - langdetect
     - sentencepiece
