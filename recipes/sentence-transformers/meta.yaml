@@ -30,7 +30,7 @@ requirements:
     - scikit-learn
     - scipy
     - pytorch >=1.0.1
-    - tqdm
+    - tqdm 
     - transformers
     - dataclasses  # [py36]
 
