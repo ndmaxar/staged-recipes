@@ -2,11 +2,11 @@
 {% set version = "0.3.4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 02114fb1a331131d4f4a70cbbc3022f4b873ef434b18da30cc0d7b7d5822834a
 
 build:
@@ -14,7 +14,7 @@ build:
   entry_points:
     - bert-score=bert_score_cli.score:main
     - bert-score-show=bert_score_cli.visualize:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   skip: True  # [py<36]
 
 requirements:

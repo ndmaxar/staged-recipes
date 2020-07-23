@@ -47,8 +47,6 @@ test:
     - wandb --help
     - wb --help
     - wanbd --help
-  requires:
-    - mock >=2.0.0
 
 about:
   home: https://github.com/wandb/client
