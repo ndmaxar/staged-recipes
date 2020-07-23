@@ -12,14 +12,13 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [py<37]
+  skip: True  # [py<36]
 
 requirements:
   host:
     - pip
     - python
   run:
-    # - dataclasses;python_version <'3.7'
     - dill
     - filelock
     - numpy
@@ -27,6 +26,7 @@ requirements:
     - python
     - requests >=2.19.0
     - tqdm >=4.27
+    - dataclasses  # [py36]
 
 test:
   imports:
