@@ -22,7 +22,7 @@ requirements:
     - dill
     - filelock
     - numpy
-    - pyarrow >=0.17
+    - pyarrow ==0.17
     - python
     - requests >=2.19.0
     - tqdm >=4.27
@@ -35,8 +35,8 @@ test:
     - nlp.datasets
     - nlp.metrics
     - nlp.utils
-  requires:
-    - pyarrow >=0.17
+  # requires:
+  #   - pyarrow >=0.17
 
 about:
   home: https://github.com/huggingface/nlp
