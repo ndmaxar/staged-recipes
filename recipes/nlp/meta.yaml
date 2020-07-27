@@ -35,8 +35,6 @@ test:
     - nlp.datasets
     - nlp.metrics
     - nlp.utils
-  # requires:
-  #   - pyarrow >=0.17
 
 about:
   home: https://github.com/huggingface/nlp
