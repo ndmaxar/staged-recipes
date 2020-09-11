@@ -34,6 +34,7 @@ requirements:
     - pip
   run:
     - python
+    - tensorflow
     - absl-py >=0.2.2
 
 test:
