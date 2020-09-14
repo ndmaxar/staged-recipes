@@ -31,11 +31,27 @@ requirements:
     - pip
     - cython
     - numpy
+    - imageio
+    - trimesh
+    # - opencv-python
+    # - torch
+    # - tensorflow
+    - moderngl
+    - pyrr
+    - pytest-xvfb
   run:
     - python
     - numpy
     - scipy
     - cython
+    - imageio
+    - trimesh
+    # - opencv-python
+    # - torch
+    # - tensorflow
+    - moderngl
+    - pyrr
+    - pytest-xvfb
 
 test:
   imports:
