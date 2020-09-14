@@ -37,7 +37,7 @@ requirements:
     # - opencv-python
     # - torch
     # - tensorflow
-    - moderngl
+    # - moderngl
     - pyrr
     - pytest-xvfb
   run:
@@ -50,7 +50,7 @@ requirements:
     # - opencv-python
     # - torch
     # - tensorflow
-    - moderngl
+    # - moderngl
     - pyrr
     - pytest-xvfb
 
