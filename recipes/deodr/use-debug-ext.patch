@@ -1,17 +1,25 @@
-From a0c3a8dda32664df513a49f6b3cb60cdc58f22a4 Mon Sep 17 00:00:00 2001
+From ef1382c415830aef4d9b89869fc739a1efa2e779 Mon Sep 17 00:00:00 2001
 From: ndana <nathan.dana@radiantsolutions.com>
-Date: Tue, 15 Sep 2020 09:06:55 -0600
+Date: Tue, 15 Sep 2020 09:15:08 -0600
 Subject: [PATCH] use debug ext
 
 ---
- setup.py | 20 ++++++++++----------
- 1 file changed, 10 insertions(+), 10 deletions(-)
+ setup.py | 21 +++++++++++----------
+ 1 file changed, 11 insertions(+), 10 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index 449b74e..17c15dc 100644
+index 449b74e..f3497e5 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -8,16 +8,16 @@ import numpy as np
+@@ -1,6 +1,7 @@
+ """Setup script for the DEODR project."""
+ 
+ from setuptools import setup, find_packages
++from distutils.core import Extension
+ 
+ from Cython.Build import cythonize
+ 
+@@ -8,16 +9,16 @@ import numpy as np
  
  
  # compilation mode for debuging
@@ -26,12 +34,12 @@ index 449b74e..17c15dc 100644
 -
 -extensions = "deodr/differentiable_renderer_cython.pyx"
 +extensions = [
-+Extension("differentiable_renderer_cython",
-+["DEODR/differentiable_renderer_cython.pyx"]
-+,extra_compile_args=["-Zi", "/Od"]
-+,extra_link_args=["-debug"],
-+undef_macros = [ "NDEBUG" ]
-+)
++    Extension("differentiable_renderer_cython",
++        ["DEODR/differentiable_renderer_cython.pyx"],
++        extra_compile_args=["-Zi", "/Od"],
++        extra_link_args=["-debug"],
++        undef_macros = [ "NDEBUG" ]
++    )
 +]
 +
 +# extensions = "deodr/differentiable_renderer_cython.pyx"
