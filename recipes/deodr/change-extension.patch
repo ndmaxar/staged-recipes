@@ -33,7 +33,7 @@ index 449b74e..cff11f3 100644
 -# ]
 +extensions = [
 +Extension("differentiable_renderer_cython",
-+["DEODR/differentiable_renderer_cython.pyx"]
++["deodr/differentiable_renderer_cython.pyx"]
 +,extra_compile_args=["-Zi", "/Od"]
 +,extra_link_args=["-debug"],
 +undef_macros = [ "NDEBUG" ]
