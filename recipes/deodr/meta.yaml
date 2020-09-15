@@ -37,6 +37,7 @@ requirements:
     - pip
     - cython
     - numpy
+    - scipy
   run:
     - python
     - numpy
