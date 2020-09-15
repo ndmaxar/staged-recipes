@@ -1,0 +1,56 @@
+From 7cb06098ae4c2f6bcbbf482651b93a05337cf827 Mon Sep 17 00:00:00 2001
+From: ndana <nathan.dana@radiantsolutions.com>
+Date: Tue, 15 Sep 2020 14:41:04 -0600
+Subject: [PATCH] change extension
+
+---
+ setup.py | 19 ++++++++++---------
+ 1 file changed, 10 insertions(+), 9 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index 449b74e..cff11f3 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,6 +1,7 @@
+ """Setup script for the DEODR project."""
+ 
+ from setuptools import setup, find_packages
++from distutils.core import Extension
+ 
+ from Cython.Build import cythonize
+ 
+@@ -8,14 +9,14 @@ import numpy as np
+ 
+ 
+ # compilation mode for debuging
+-# extensions = [
+-# Extension("differentiable_renderer_cython",
+-# ["DEODR/differentiable_renderer_cython.pyx"]
+-# ,extra_compile_args=["-Zi", "/Od"]
+-# ,extra_link_args=["-debug"],
+-# undef_macros = [ "NDEBUG" ]
+-# )
+-# ]
++extensions = [
++Extension("differentiable_renderer_cython",
++["DEODR/differentiable_renderer_cython.pyx"]
++,extra_compile_args=["-Zi", "/Od"]
++,extra_link_args=["-debug"],
++undef_macros = [ "NDEBUG" ]
++)
++]
+ 
+ extensions = "deodr/differentiable_renderer_cython.pyx"
+ 
+@@ -32,7 +33,7 @@ setup(
+     url="https://github.com/martinResearch/DEODR",
+     license="BSD",
+     packages=find_packages(),
+-    package_data={"deodr": ["*.pyx", "data/*.*", "data/**/*.*"]},
++    package_data={"deodr": ["*.pyx", "*.pxd", "data/*.*", "data/**/*.*"]},
+     ext_modules=my_modules,  # additional source file(s)),
+     include_dirs=[np.get_include()],
+     setup_requires=["numpy", "scipy", "cython"],
+-- 
+2.28.0
+
