@@ -40,7 +40,7 @@ index 449b74e..cff11f3 100644
 +)
 +]
  
- extensions = "deodr/differentiable_renderer_cython.pyx"
+-# extensions = "deodr/differentiable_renderer_cython.pyx"
  
 @@ -32,7 +33,7 @@ setup(
      url="https://github.com/martinResearch/DEODR",
