@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/martinResearch/DEODR/releases/download/v0.1.14/deodr-0.1.14.tar.gz
   sha256: d4c2a1997acf23835ca3003ea02bb63d3b294ad2908d9ce72cf78c6d0fcd42a4
+  patches:
+    - use-debug-ext.patch
 
 build:
   # Uncomment the following line if the package is pure Python and the recipe is exactly the same for all platforms.
