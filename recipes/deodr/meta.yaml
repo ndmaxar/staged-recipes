@@ -11,7 +11,7 @@ source:
   # only can get these files with a repo clone
   # git_url: https://github.com/martinResearch/DEODR.git
   url: https://github.com/martinResearch/DEODR/releases/download/v0.1.14/deodr-0.1.14.tar.gz
-  sha256: d4c2a1997acf23835ca3003ea02bb63d3b294ad2908d9ce72cf78c6d0fcd42a4
+  sha256: 8e559df8e119d949994213a1f1ae77210def7ccfa248dc8ceeabd9505e389772
   # the patch is actually unnecessary bc we didn't have the pxd files to begin with
   # patches:
   #   - change-extension.patch
