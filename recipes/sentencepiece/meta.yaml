@@ -26,7 +26,7 @@ requirements:
     - gperftools  # [not win]
   run:
     - python
-    - gperftools
+    - gperftools  # [not win]
 
 test:
   imports:
