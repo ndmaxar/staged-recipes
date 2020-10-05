@@ -23,7 +23,7 @@ requirements:
   host:
     - pip
     - python
-    - gperftools
+    - gperftools  # [not win]
   run:
     - python
     - gperftools
