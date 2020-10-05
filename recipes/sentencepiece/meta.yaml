@@ -19,10 +19,12 @@ requirements:
     - {{ compiler('cxx') }}
     - pkg-config
     - gperftools  # [not win]
+    - pthreads-win32  # [win]
     - make
   host:
     - pip
     - python
+    - pthreads-win32  # [win]
     - gperftools  # [not win]
   run:
     - python
