@@ -1,0 +1,39 @@
+{% set name = "language_tool" %}
+{% set version = "0.3" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: c4c956199714b8d587a9fdbb4a801d908a5a67b2f8bca3c4f225e4bc93134570
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - language_tool
+    - language_tool.backports
+
+about:
+  home: "https://bitbucket.org/spirit/language_tool"
+  license: "GNU Lesser General Public v3 or later (LGPLv3+)"
+  license_family: LGPL
+  license_file: 
+  summary: "LanguageTool through server mode"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here
