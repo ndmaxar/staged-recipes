@@ -35,12 +35,15 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - bazel
+    - grpc-cpp
   host:
+    - grpc-cpp
     - python
     - pip
     - pytest
     - poetry
   run:
+    - grpc-cpp
     - python
     - poetry
     - pytest
