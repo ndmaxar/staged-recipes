@@ -1,6 +1,6 @@
 
 {% set name = "pydp" %}
-{% set version = "0.1.4dev" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
