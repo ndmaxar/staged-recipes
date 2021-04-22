@@ -14,6 +14,10 @@ build:
   number: 0
   script: 
    - git submodule update --init --recursive
+   - ls 
+   - ls third_party
+   - ls third_party/differential-privacy
+   - ls third_party/differential-privacy/cc
    - ./prereqs_mac.sh  # [osx]
    - ./prereqs_linux.sh  # [linux]
    - ./build_PyDP.sh
