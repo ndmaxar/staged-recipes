@@ -16,7 +16,7 @@ build:
     # - git submodule update --init --recursive
     - echo "THIRD PARTY"
     - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy && git checkout 2b320f8c03ba97215e3de7f7782eb5b8fd0b2354
-    - cd ../
+    - cd ../../
     - echo "ls"
     - ls 
     - echo "tp"
