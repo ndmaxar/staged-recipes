@@ -12,7 +12,11 @@ source:
 
 build:
   number: 0
-  # script: {{ PYTHON }} -m pip install . -vv
+  script: 
+   - ./prereqs_mac.sh  # [osx]
+   - ./prereqs_linux.sh  # [linux]
+   - ./build_PyDP.sh
+   - {{ PYTHON }} -m pip install . -vv
   skip: True  # [win]
 
 requirements:
