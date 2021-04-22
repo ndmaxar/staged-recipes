@@ -19,6 +19,7 @@ requirements:
     - python
   run:
     - python
+    - urllib3
 
 test:
   imports:
