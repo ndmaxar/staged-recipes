@@ -25,6 +25,7 @@ requirements:
     - pytest
   run:
     - python
+    - poetry
     - pytest
 
 test:
