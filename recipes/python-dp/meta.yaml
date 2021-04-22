@@ -14,7 +14,7 @@ build:
   number: 0
   script: 
     - git submodule update --init --recursive
-    - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy && git checkout "2b320f8c03ba97215e3de7f7782eb5b8fd0b2354"
+    - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy && git checkout 2b320f8c03ba97215e3de7f7782eb5b8fd0b2354
     - ls 
     - ls third_party
     - ls third_party/differential-privacy
@@ -22,7 +22,7 @@ build:
     - ./prereqs_mac.sh  # [osx]
     - ./prereqs_linux.sh  # [linux]
     - ./build_PyDP.sh
-   - {{ PYTHON }} -m pip install . -vv
+    - {{ PYTHON }} -m pip install . -vv
   skip: True  # [win]
 
 requirements:
