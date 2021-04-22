@@ -13,6 +13,7 @@ source:
 build:
   number: 0
   script: 
+   - git submodule update --init --recursive
    - ./prereqs_mac.sh  # [osx]
    - ./prereqs_linux.sh  # [linux]
    - ./build_PyDP.sh
