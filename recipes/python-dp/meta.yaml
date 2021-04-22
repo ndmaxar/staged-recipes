@@ -23,6 +23,7 @@ requirements:
     - python
     - pip
     - pytest
+    - poetry
   run:
     - python
     - poetry
