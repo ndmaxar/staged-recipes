@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/OpenMined/PyDP/archive/v{{ version }}.tar.gz
-  sha256: 9cc736b453fa65ed0a97a89b95a54349fae229bba98e0c761335c81fabadbabb
+  sha256: 89311de8acd83d9b1cd672804683cf7d1632e9d2ec2fd5f9c71aec640163ed57
 
 build:
   number: 0
