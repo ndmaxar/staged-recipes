@@ -45,7 +45,7 @@ requirements:
     - googleapis-common-protos-grpc
     - clang
     - grpc-cpp
-    - python <3.9,>=3.6
+    - python
     - pip
     - pytest
     - poetry
@@ -55,7 +55,7 @@ requirements:
     - googleapis-common-protos-grpc
     - clang
     - grpc-cpp
-    - python <3.9,>=3.6
+    - python
     - poetry
     - pytest
 
