@@ -25,9 +25,12 @@ build:
     - ls third_party/differential-privacy
     - echo "tp/dp/cc"
     - ls third_party/differential-privacy/cc
+    - echo "RUN PREREQS"
     - ./prereqs_mac.sh  # [osx]
     - ./prereqs_linux.sh  # [linux]
+    - echo "RUN BUILD PYDP"
     - ./build_PyDP.sh
+    - echo "BOULD PYDP"
     - {{ PYTHON }} -m pip install . -vv
   skip: True  # [win]
 
