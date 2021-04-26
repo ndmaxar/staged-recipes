@@ -32,7 +32,7 @@ build:
     - ./build_PyDP.sh
     - echo "BOULD PYDP"
     - {{ PYTHON }} -m pip install . -vv
-  skip: True  # [win or py>=39]
+  skip: True  # [(win) or (py39)]
 
 requirements:
   build:
