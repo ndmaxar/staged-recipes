@@ -41,6 +41,7 @@ requirements:
     - grpc-cpp
     - googleapis-common-protos-grpc
     - clang
+    - networkx >=2.5
   host:
     - googleapis-common-protos-grpc
     - clang
