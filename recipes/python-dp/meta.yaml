@@ -14,23 +14,23 @@ build:
   number: 0
   script: 
     # - git submodule update --init --recursive
-    - echo "THIRD PARTY"
-    - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy
-    - cd ../../
-    - echo "ls"
-    - ls 
-    - echo "tp"
-    - ls third_party
-    - echo "tp/dp"
-    - ls third_party/differential-privacy
-    - echo "tp/dp/cc"
-    - ls third_party/differential-privacy/cc
-    - echo "RUN PREREQS"
-    - ./prereqs_mac.sh  # [osx]
-    - ./prereqs_linux.sh  # [linux]
-    - echo "RUN BUILD PYDP"
-    - ./build_PyDP.sh
-    - echo "BOULD PYDP"
+    # - echo "THIRD PARTY"
+    # - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy
+    # - cd ../../
+    # - echo "ls"
+    # - ls 
+    # - echo "tp"
+    # - ls third_party
+    # - echo "tp/dp"
+    # - ls third_party/differential-privacy
+    # - echo "tp/dp/cc"
+    # - ls third_party/differential-privacy/cc
+    # - echo "RUN PREREQS"
+    # - ./prereqs_mac.sh  # [osx]
+    # - ./prereqs_linux.sh  # [linux]
+    # - echo "RUN BUILD PYDP"
+    # - ./build_PyDP.sh
+    # - echo "BOULD PYDP"
     - {{ PYTHON }} -m pip install . -vv
   skip: True  # [win]
 
