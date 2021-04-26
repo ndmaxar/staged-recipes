@@ -32,7 +32,6 @@ build:
     - ./build_PyDP.sh
     - echo "BOULD PYDP"
     - {{ PYTHON }} -m pip install . -vv
-  skip: True  # [py>38]
   skip: True  # [win]
 
 requirements:
@@ -46,7 +45,7 @@ requirements:
     - googleapis-common-protos-grpc
     - clang
     - grpc-cpp
-    - python
+    - python <3.9,>=3.6
     - pip
     - pytest
     - poetry
@@ -54,7 +53,7 @@ requirements:
     - googleapis-common-protos-grpc
     - clang
     - grpc-cpp
-    - python
+    - python <3.9,>=3.6
     - poetry
     - pytest
 
