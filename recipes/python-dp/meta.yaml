@@ -49,7 +49,9 @@ requirements:
     - pip
     - pytest
     - poetry
+    - networkx >=2.5
   run:
+    - networkx >=2.5
     - googleapis-common-protos-grpc
     - clang
     - grpc-cpp
