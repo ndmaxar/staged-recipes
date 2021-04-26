@@ -39,13 +39,16 @@ requirements:
     - {{ compiler('cxx') }}
     - bazel
     - grpc-cpp
+    - googleapis-common-protos-grpc
   host:
+    - googleapis-common-protos-grpc
     - grpc-cpp
     - python
     - pip
     - pytest
     - poetry
   run:
+    - googleapis-common-protos-grpc
     - grpc-cpp
     - python
     - poetry
