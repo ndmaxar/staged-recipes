@@ -37,7 +37,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - bazel <4
+    - bazel <4.0
     - grpc-cpp
     - googleapis-common-protos-grpc
     - clang
