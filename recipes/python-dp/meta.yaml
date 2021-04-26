@@ -40,8 +40,10 @@ requirements:
     - bazel
     - grpc-cpp
     - googleapis-common-protos-grpc
+    - clang
   host:
     - googleapis-common-protos-grpc
+    - clang
     - grpc-cpp
     - python
     - pip
@@ -49,6 +51,7 @@ requirements:
     - poetry
   run:
     - googleapis-common-protos-grpc
+    - clang
     - grpc-cpp
     - python
     - poetry
