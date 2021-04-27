@@ -14,8 +14,6 @@ build:
   number: 0
   script: 
     # - git submodule update --init --recursive
-    # - echo "THIRD PARTY"
-    # - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy
     # - cd ../../
     # - echo "ls"
     # - ls 
@@ -31,8 +29,14 @@ build:
     # - echo "RUN BUILD PYDP"
     # - ./build_PyDP.sh
     # - echo "BOULD PYDP"
+    - echo "THIRD PARTY"
+    - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy
+    - echo "BAZEL CMD"
+    - bazel coverage src/python:bindings_test --config Linux --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHON  # [linux]
+    - bazel coverage src/python:bindings_test --config macOS --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHON  # [osx]
+    - echo "PYTHON BUILD CMD"
     - {{ PYTHON }} -m pip install . -vv
-  skip: True  # [win or py39]
+  skip: True  # [win]
 
 requirements:
   build:
