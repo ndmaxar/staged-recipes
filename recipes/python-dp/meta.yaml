@@ -31,6 +31,9 @@ build:
     # - echo "BOULD PYDP"
     - echo "THIRD PARTY"
     - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy
+    - cd ../../
+    - echo "PWD"
+    - pwd
     - echo "BAZEL CMD"
     # - bazel coverage src/python:bindings_test --config linux --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHON  # [linux]
     # - bazel coverage src/python:bindings_test --config macos --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHON  # [osx]
