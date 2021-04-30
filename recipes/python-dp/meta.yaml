@@ -39,8 +39,8 @@ build:
     - rm -rf third_party/differential-privacy/examples/java
     - echo "PWD"
     - pwd
-    - echo "READ .so"
-    - cat ./src/pydp
+    # - echo "READ .so"
+    # - cat ./src/pydp
     - echo "BAZEL CMD"
     # coverage is wrong cmd
     # - PYTHONPATH=$($PYTHON -c 'import sys; print([x for x in sys.path if "site-packages" in x][0]);')
@@ -50,8 +50,8 @@ build:
     - bazel build --config Linux src/python:bindings_test  --verbose_failures  # [linux]
     - rm -f _pydp.so
     - cp -f ./bazel-bin/src/bindings/_pydp.so ./src/pydp
-    - echo "READ NEW .so"
-    - cat ./src/pydp
+    # - echo "READ NEW .so"
+    # - cat ./src/pydp
     - echo "PYTHON BUILD CMD"
     - {{ PYTHON }} -m pip install . -vv
   skip: True  # [win]
