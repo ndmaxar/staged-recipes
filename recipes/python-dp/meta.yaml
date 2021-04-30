@@ -31,15 +31,21 @@ build:
     # - echo "BOULD PYDP"
     - echo "THIRD PARTY"
     - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy
+    - git checkout 2b320f8c03ba97215e3de7f7782eb5b8fd0b2354
     - cd ../../
+    - rm -rf third_party/differential-privacy/java
+    - rm -rf third_party/differential-privacy/examples/java
     - echo "PWD"
     - pwd
     - echo "BAZEL CMD"
-    # - bazel coverage src/python:bindings_test --config linux --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHON  # [linux]
-    # - bazel coverage src/python:bindings_test --config macos --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHON  # [osx]
-    - PYTHONPATH=$($PYTHON -c 'import sys; print([x for x in sys.path if "site-packages" in x][0]);')
-    - bazel coverage src/python:bindings_test --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHONPATH  # [linux]
-    - bazel coverage src/python:bindings_test --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHONPATH  # [osx]
+    # coverage is wrong cmd
+    # - PYTHONPATH=$($PYTHON -c 'import sys; print([x for x in sys.path if "site-packages" in x][0]);')
+    # - bazel coverage src/python:bindings_test --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHONPATH  # [linux]
+    # - bazel coverage src/python:bindings_test --verbose_failures --action_env=PYTHON_BIN_PATH=$PYTHON --action_env=PYTHON_LIB_PATH=$PYTHONPATH  # [osx]
+    - bazel build --config macOS src/python:bindings_test  --verbose_failures  # [osx]
+    - bazel build --config Linux src/python:bindings_test  --verbose_failures  # [linux]
+    - rm -f _pydp.so
+    - cp -f ./bazel-bin/src/bindings/_pydp.so ./src/pydp
     - echo "PYTHON BUILD CMD"
     - {{ PYTHON }} -m pip install . -vv
   skip: True  # [win]
