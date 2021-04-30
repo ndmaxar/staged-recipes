@@ -39,7 +39,7 @@ build:
     - rm -rf third_party/differential-privacy/examples/java
     - echo "PWD"
     - pwd
-    - "READ .so"
+    - echo "READ .so"
     - cat ./src/pydp
     - echo "BAZEL CMD"
     # coverage is wrong cmd
@@ -50,7 +50,7 @@ build:
     - bazel build --config Linux src/python:bindings_test  --verbose_failures  # [linux]
     - rm -f _pydp.so
     - cp -f ./bazel-bin/src/bindings/_pydp.so ./src/pydp
-    - "READ NEW .so"
+    - echo "READ NEW .so"
     - cat ./src/pydp
     - echo "PYTHON BUILD CMD"
     - {{ PYTHON }} -m pip install . -vv
