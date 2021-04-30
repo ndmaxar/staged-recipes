@@ -29,6 +29,8 @@ build:
     # - echo "RUN BUILD PYDP"
     # - ./build_PyDP.sh
     # - echo "BOULD PYDP"
+    - echo "set ENV"
+    - MACOSX_DEPLOYMENT_TARGET=10.13
     - echo "THIRD PARTY"
     - mkdir -p third_party && cd third_party && git clone https://github.com/google/differential-privacy.git && cd differential-privacy
     - git checkout 2b320f8c03ba97215e3de7f7782eb5b8fd0b2354
@@ -57,18 +59,17 @@ requirements:
     - grpc-cpp
     - googleapis-common-protos-grpc
     - clang
-    - networkx >=2.5
+    - pytorch
   host:
     - googleapis-common-protos-grpc
     - clang
     - grpc-cpp
+    - pytorch
     - python
     - pip
     - pytest
     - poetry
-    - networkx >=2.5
   run:
-    - networkx >=2.5
     - googleapis-common-protos-grpc
     - clang
     - grpc-cpp
